@@ -5,13 +5,13 @@ var Blog = Backbone.Model.extend({
         title: '',
         url: ''
     }
-})
+});
 
 //making Backbone Collection: which is array of Models
 var Blogs = Backbone.Collection.extend({});
 
 //Instantiate two Blogs
-
+/*
 var blog1 = new Blog({
     author: 'Ankita',
     title: 'Ankita\'s Blog Portfolio',
@@ -23,9 +23,10 @@ var blog2 = new Blog({
     title: 'Ankita\'s Blog IBD',
     url: 'https://inflammatoryboweldiesease.netlify.app'
 })
+*/
 
 //Instantiate a COllection
-var blogs = new Blogs([blog1,blog2]);
+var blogs = new Blogs();
 
 //make Backbone Views
 // 1st View : Backbone View for one Blog
@@ -77,9 +78,9 @@ $(document).ready(function () {
             url: $('.url-input').val()
         });
         //Clear entered content in input tag after adding it
-        // $('.author-input').val('');
-        // $('.title-input').val('');
-        // $('.url-input').val('');
+        $('.author-input').val('');
+        $('.title-input').val('');
+        $('.url-input').val('');
 
         //Just checking in console whether the new blogs are getting added
         console.log(blog.toJSON());
