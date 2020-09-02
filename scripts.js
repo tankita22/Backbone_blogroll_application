@@ -26,9 +26,13 @@ var blog2 = new Blog({
 */
 
 //Instantiate a COllection
+
+// var blogs = new Blogs([blog1, blog2]);
 var blogs = new Blogs();
 
+
 //make Backbone Views
+
 // 1st View : Backbone View for one Blog
 var BlogView = Backbone.View.extend({
     model: new Blog(),
